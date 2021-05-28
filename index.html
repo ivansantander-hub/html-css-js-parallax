@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Parallax</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <a href="#" class="logo">Forest</a>
+        <ul>
+            <li><a href="#" class="active">Inicio</a></li>
+            <li><a href="#">Info</a></li>
+            <li><a href="#">Portafolio</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 id="text" class="text"><span>Haz de hoy una nueva</span> <br> Aventura</h2>
+        <img src="images/bird1.png" id="bird1" class="bird1" alt="">
+        <img src="images/bird2.png" id="bird2" class="bird2" alt="">
+        <img src="images/forest.png" id="forest" class="forest" alt="">
+        <a href="#" class="btn" id="btn">Explorar</a>
+        <img src="images/rocks.png" id="rocks" class="rocks" alt="">
+        <img src="images/water.png" id="water" class="water" alt="">
+    </section>
+    <div class="content-text" id="content-text">
+        <h2>Efectos Scroll Parallax</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio explicabo quaerat harum fuga laborum possimus, veniam necessitatibus, animi officia dolores asperiores, maxime perspiciatis quae impedit officiis corrupti. Hic, accusantium dolorum. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, placeat sit? Labore rem sint facilis fugiat minus illum ad, unde ullam corporis exercitationem sed nihil nobis debitis molestiae dignissimos officiis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio explicabo quaerat harum fuga laborum possimus, veniam necessitatibus, animi officia dolores asperiores, maxime perspiciatis quae impedit officiis corrupti. Hic, accusantium dolorum. <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio explicabo quaerat harum fuga laborum possimus, veniam necessitatibus, animi officia dolores asperiores, maxime perspiciatis quae impedit officiis corrupti. Hic, accusantium dolorum. <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio explicabo quaerat harum fuga laborum possimus, veniam necessitatibus, animi officia dolores asperiores, maxime perspiciatis quae impedit officiis corrupti. Hic, accusantium dolorum. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eligendi harum atque nihil culpa ipsam quam ad at quis nesciunt! Sint fuga excepturi ducimus distinctio placeat molestiae sed laborum nemo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores non quasi exercitationem sed sequi expedita. Tempore necessitatibus modi doloribus itaque consectetur illo dolores accusamus perspiciatis reprehenderit, dolore omnis ut veritatis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est officiis distinctio minima corporis ut natus! Perferendis eligendi voluptate voluptates. Modi velit cum non eaque consectetur nam. Quidem reprehenderit omnis provident? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quibusdam corporis consequuntur amet ratione perferendis id at aliquid fugit blanditiis adipisci aspernatur magnam maxime ad laborum optio, expedita voluptas cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio explicabo quaerat harum fuga laborum possimus, veniam necessitatibus, animi officia dolores asperiores, maxime perspiciatis quae impedit officiis corrupti. Hic, accusantium dolorum. <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio explicabo quaerat harum fuga laborum possimus, veniam necessitatibus, animi officia dolores asperiores, maxime perspiciatis quae impedit officiis corrupti. Hic, accusantium dolorum. <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio explicabo quaerat harum fuga laborum possimus, veniam necessitatibus, animi officia dolores asperiores, maxime perspiciatis quae impedit officiis corrupti. Hic, accusantium dolorum. <br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nesciunt, molestiae modi corrupti molestias quod rerum reprehenderit odit maxime nulla commodi tenetur similique, consequatur praesentium temporibus error nostrum at atque.loremLorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nesciunt, molestiae modi corrupti molestias quod rerum reprehenderit odit maxime nulla commodi tenetur similique, consequatur praesentium temporibus error nostrum at atque.loremLorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nesciunt, molestiae modi corrupti molestias quod rerum reprehenderit odit maxime nulla commodi tenetur similique, consequatur praesentium temporibus error nostrum at atque.loremLorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nesciunt, molestiae modi corrupti molestias quod rerum reprehenderit odit maxime nulla commodi tenetur similique, consequatur praesentium temporibus error nostrum at atque.loremLorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nesciunt, molestiae modi corrupti molestias quod rerum reprehenderit odit maxime nulla commodi tenetur similique, consequatur praesentium temporibus error nostrum at atque.lorem</p>
+    </div>
+
+    <script>
+        let text = document.getElementById("text");
+        let bird1 = document.getElementById("bird1");
+        let bird2 = document.getElementById("bird2");
+        let forest = document.getElementById("forest");
+        let rocks = document.getElementById("rocks");
+        let water = document.getElementById("water");
+        let header = document.getElementById("header");
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            
+            text.style.top = 20 + value * -0.5 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            rocks.style.top = value * -0.12 + 'px';
+            forest.style.top = value * 0.25 + 'px';
+            header.style.top = value * .5 + 'px';
+        });
+    </script>
+
+</body>
+</html>
